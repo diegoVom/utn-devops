@@ -1,1 +1,1 @@
-Practica Exploratoria I
+Practica de Curso DevOps.
