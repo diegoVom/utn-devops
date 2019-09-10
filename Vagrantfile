@@ -92,11 +92,19 @@ Vagrant.configure("2") do |config|
   # SHELL
 
   # Copia el archivo de configuración del servidor web
-  config.vm.provision "file", source: "Configs/devops.site.conf", destination: "/tmp/devops.site.conf"
-  
+#  config.vm.provision "file", source: "Configs/devops.site.conf", destination: "/tmp/devops.site.conf"
+
+  # Con esta sentencia lo que hara Vagrant es copiar el archivo a la máquina Ubuntu.
+  # Además de usarlo como ejemplo para distinguir dos maneras de aprovisionamiento el archivo contiene
+  # una definición del firewall de Ubuntu para permitir el tráfico de red que se redirecciona internamente, configuración 
+  # necesaria para Docker. Luego será copiado al lugar correcto por el script Vagrant.bootstrap.sh
+  config.vm.provision "file", source: "hostConfigs/ufw", destination: "/tmp/" 
+
   # En este archivo tendremos el provisionamiento de software necesario para nuestra 
   # maquina virtual. Por ejemplo, servidor web, servidor de base de datos, etc.
-  config.vm.provision :shell, path: "Vagrant.bootstrap.sh", run: "always" 
-
+#  config.vm.provision :shell, path: "Vagrant.bootstrap.sh", run: "always" 
+  # Con esta sentencia lo que hara Vagrant es transferir este archivo a la máquina Ubuntu
+  # y ejecutarlo una vez iniciado. En este caso ahora tendrá el aprovisionamiento para la instalación de Docker
+  config.vm.provision :shell, path: "Vagrant.bootstrap.sh"
 
 end
