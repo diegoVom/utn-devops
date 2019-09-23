@@ -5,10 +5,8 @@
 #Actualizo los paquetes de la maquina virtual
 sudo apt-get update -y ;
 
-#Desintalo el servidor web instalado previamente en la unidad 1, 
-# a partir de ahora va a estar en un contenedor de Docker.
-sudo apt-get remove --purge apache2 -y; 
-sudo apt autoremove -y;
+#Aprovisionamiento de software
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common dos2unix linux-image-extra-$(uname -r) linux-image-extra-virtual
 
 # Directorio para los archivos de la base de datos MySQL. El servidor de la base de datos 
 # es instalado mediante una imagen de Docker. Esto está definido en el archivo
@@ -18,51 +16,73 @@ sudo mkdir -p /var/db/mysql
 # Muevo el archivo de configuración de firewall al lugar correspondiente
 sudo mv -f /tmp/ufw /etc/default/ufw
 
-##Swap
-sudo swapon /swapdir/swapfile
-echo "/swapdir/swapfile       none    swap    sw      0       0" | sudo tee -a /etc/fstab /etc/fstab
-sudo sysctl vm.swappiness=10
-echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
-
+# Muevo el archivo hosts. En este archivo esta asociado el nombre de dominio con una dirección
+# ip para que funcione las configuraciones de Puppet
+sudo mv -f /tmp/etc_hosts.txt /etc/hosts
 
 # Configuración applicación
 # ruta raíz del servidor web
-APACHE_ROOT="/var/www";
+APP_ROOT="/var/www";
 # ruta de la aplicación
-APP_PATH="$APACHE_ROOT/utn-devops-app/";
+APP_PATH="$APP_PATH" . "/utn-devops-app/";
 
 # descargo la app del repositorio
-sudo rm -r $APP_PATH
-cd $APACHE_ROOT;
+sudo rm -r $APP_ROOT;
+cd $APP_ROOT;
 sudo git clone https://github.com/diegoVom/utn-devops-app.git;
 cd $APP_PATH;
 sudo git checkout unidad-2;
 
-######## Instalacion de DOCKER ########
-#
-# Esta instalación de docker es para demostrar el aprovisionamiento 
-# complejo mediante Vagrant. La herramienta Vagrant por si misma permite 
-# un aprovisionamiento de container mediante el archivo Vagrantfile. A fines 
-# del ejemplo que se desea mostrar en esta unidad que es la instalación mediante paquetes del
-# software Docker este ejemplo es suficiente, para un uso más avanzado de Vagrant
-# se puede consultar la documentación oficial en https://www.vagrantup.com
-#
+###### Instalación de Puppet ######
+#configuración de repositorio
+wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
+sudo dpkg -i puppet5-release-xenial.deb
+sudo apt update
 
-#Instalamos paquetes adicionales 
-sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common ;
 
-##Configuramos el repositorio
-curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" > /tmp/docker_gpg;
-sudo apt-key add < /tmp/docker_gpg && sudo rm -f /tmp/docker_gpg;
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable";
+# Instalación de master
+sudo apt-get install -y puppet-lint puppetmaster
 
-#Actualizo los paquetes con los nuevos repositorios
-sudo apt-get update -y ;
+# Instalación de agente. Esto se debiera hacer en otro equipo pero se realiza aquí para simplificar
+# el ejemplo
+sudo apt-get install -y puppet 
 
-#Instalo docker desde el repositorio oficial
-sudo apt-get install -y docker-ce docker-compose
+# Muevo el archivo de configuración de Puppet al lugar correspondiente
+sudo mv -f /tmp/puppet-master.conf /etc/puppet/puppet.conf
 
-#Lo configuro para que inicie en el arranque
-sudo systemctl enable docker
+# elimino certificados de que se generan en la instalación.
+# no nos sirven ya que el certificado depende del nombre que se asigne al maestro
+# y en este ejemplo se modifico.
+sudo rm -rf /var/lib/puppet/ssl
 
+# Agrego el usuario puppet al grupo de sudo, para no necesitar password al reiniciar un servicio
+sudo usermod -a -G sudo,puppet puppet
+
+# Estructura de directorios para crear el modulo de Puppet para Docker
+sudo mkdir -p /etc/puppet/modules/docker_install/manifests
+sudo mkdir /etc/puppet/modules/docker_install/files
+
+# Lo mismo que el anterior pero para el modulo de Jenkins
+sudo mkdir -p /etc/puppet/modules/jenkins/manifests
+sudo mkdir /etc/puppet/modules/jenkins/files
+
+# muevo los archivos que utiliza Puppet
+sudo mv -f /tmp/site.pp /etc/puppet/manifests/
+sudo mv -f /tmp/init.pp /etc/puppet/modules/docker_install/manifests/init.pp
+sudo mv -f /tmp/env /etc/puppet/modules/docker_install/files
+sudo mv -f /tmp/init_jenkins.pp /etc/puppet/modules/jenkins/manifests/init.pp
+sudo mv -f /tmp/jenkins_default /etc/puppet/modules/jenkins/files/jenkins_default
+sudo mv -f /tmp/jenkins_init_d /etc/puppet/modules/jenkins/files/jenkins_init_d
+
+sudo dos2unix /etc/puppet/modules/jenkins/files/jenkins_init_d
+
+# al detener e iniciar el servicio se regeneran los certificados 
+sudo service puppetmaster stop && service puppetmaster start
+
+# limpieza de configuración del dominio utn-devops.localhost es nuestro nodo agente.
+# en nuestro caso es la misma máquina
+sudo puppet node clean utn-devops
+
+# Habilito el agente
+sudo puppet agent --certname utn-devops --enable
 

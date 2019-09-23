@@ -46,7 +46,7 @@
 [    0.000000] NODE_DATA(0) allocated [mem 0x3ffeb000-0x3ffeffff]
 [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
 [    0.000000] kvm-clock: cpu 0, msr 0:3ffe3001, primary cpu clock
-[    0.000000] kvm-clock: using sched offset of 3268936177 cycles
+[    0.000000] kvm-clock: using sched offset of 3217915241 cycles
 [    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
 [    0.000000] Zone ranges:
 [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
@@ -88,418 +88,424 @@
 [    0.000000] Console: colour VGA+ 80x25
 [    0.000000] console [tty1] enabled
 [    0.000000] console [ttyS0] enabled
-[    0.000000] tsc: Detected 2399.988 MHz processor
-[    0.139935] Calibrating delay loop (skipped) preset value.. 4799.97 BogoMIPS (lpj=9599952)
-[    0.141850] pid_max: default: 32768 minimum: 301
-[    0.142863] ACPI: Core revision 20150930
-[    0.144745] ACPI: 2 ACPI AML tables successfully acquired and loaded
-[    0.146243] Security Framework initialized
-[    0.148917] Yama: becoming mindful.
-[    0.149707] AppArmor: AppArmor initialized
-[    0.150600] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
-[    0.152478] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
-[    0.154003] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
-[    0.155452] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
-[    0.157360] Initializing cgroup subsys io
-[    0.158178] Initializing cgroup subsys memory
-[    0.159021] Initializing cgroup subsys devices
-[    0.159876] Initializing cgroup subsys freezer
-[    0.160793] Initializing cgroup subsys net_cls
-[    0.161656] Initializing cgroup subsys perf_event
-[    0.162564] Initializing cgroup subsys net_prio
-[    0.163449] Initializing cgroup subsys hugetlb
-[    0.164347] Initializing cgroup subsys pids
-[    0.166443] mce: CPU supports 0 MCE banks
-[    0.167284] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
-[    0.168302] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
-[    0.169696] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
-[    0.171876] Spectre V2 : Mitigation: Full generic retpoline
-[    0.173636] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
-[    0.175706] Speculative Store Bypass: Vulnerable
-[    0.176970] MDS: Vulnerable: Clear CPU buffers attempted, no microcode
-[    0.182051] Freeing SMP alternatives memory: 36K
-[    0.190951] ftrace: allocating 32318 entries in 127 pages
-[    0.258541] smpboot: APIC(0) Converting physical 0 to logical package 0
-[    0.259787] smpboot: Max logical packages: 1
-[    0.260874] x2apic enabled
-[    0.261799] Switched APIC routing to physical x2apic.
-[    0.264162] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
-[    0.371895] smpboot: CPU0: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz (family: 0x6, model: 0x4e, stepping: 0x3)
-[    0.374076] Performance Events: unsupported p6 CPU model 78 no PMU driver, software events only.
-[    0.387667] KVM setup paravirtual spinlock
-[    0.389367] x86: Booting SMP configuration:
-[    0.390188] .... node  #0, CPUs:      #1
-[    0.391055] kvm-clock: cpu 1, msr 0:3ffe3041, secondary cpu clock
-[    0.393139] mce: CPU supports 0 MCE banks
-[    0.395690] x86: Booted up 1 node, 2 CPUs
-[    0.396698] smpboot: Total of 2 processors activated (9599.95 BogoMIPS)
-[    0.398253] devtmpfs: initialized
-[    0.401169] evm: security.selinux
-[    0.401913] evm: security.SMACK64
-[    0.402757] evm: security.SMACK64EXEC
-[    0.403786] evm: security.SMACK64TRANSMUTE
-[    0.404721] evm: security.SMACK64MMAP
-[    0.405459] evm: security.ima
-[    0.406104] evm: security.capability
-[    0.407067] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
-[    0.408864] futex hash table entries: 512 (order: 3, 32768 bytes)
-[    0.410046] pinctrl core: initialized pinctrl subsystem
-[    0.411122] RTC time:  1:56:20, date: 09/12/19
-[    0.412144] NET: Registered protocol family 16
-[    0.423637] cpuidle: using governor ladder
-[    0.435787] cpuidle: using governor menu
-[    0.436649] PCCT header not found.
-[    0.437571] ACPI: bus type PCI registered
-[    0.438380] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
-[    0.439603] PCI: Using configuration type 1 for base access
-[    0.455298] ACPI: Added _OSI(Module Device)
-[    0.461422] ACPI: Added _OSI(Processor Device)
-[    0.465783] ACPI: Added _OSI(3.0 _SCP Extensions)
-[    0.471245] ACPI: Added _OSI(Processor Aggregator Device)
-[    0.476421] ACPI: Executed 1 blocks of module-level executable AML code
-[    0.482733] ACPI: Interpreter enabled
-[    0.484004] ACPI: (supports S0 S5)
-[    0.485282] ACPI: Using IOAPIC for interrupt routing
-[    0.487095] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-[    0.493475] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
-[    0.494599] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
-[    0.496176] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
-[    0.497984] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
-[    0.500316] PCI host bridge to bus 0000:00
-[    0.501325] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
-[    0.502521] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
-[    0.503942] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
-[    0.505679] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
-[    0.507125] pci_bus 0000:00: root bus resource [bus 00-ff]
-[    0.509840] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
-[    0.511051] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
-[    0.512191] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
-[    0.513404] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
-[    0.544406] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
-[    0.546038] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
-[    0.553024] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
-[    0.554792] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
-[    0.556320] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
-[    0.560081] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
-[    0.562022] ACPI: Enabled 2 GPEs in block 00 to 07
-[    0.563481] vgaarb: setting as boot device: PCI:0000:00:02.0
-[    0.564688] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
-[    0.566356] vgaarb: loaded
-[    0.567002] vgaarb: bridge control possible 0000:00:02.0
-[    0.568586] SCSI subsystem initialized
-[    0.569777] ACPI: bus type USB registered
-[    0.570904] usbcore: registered new interface driver usbfs
-[    0.572176] usbcore: registered new interface driver hub
-[    0.573175] usbcore: registered new device driver usb
-[    0.574360] PCI: Using ACPI for IRQ routing
-[    0.575552] NetLabel: Initializing
-[    0.576297] NetLabel:  domain hash size = 128
-[    0.577132] NetLabel:  protocols = UNLABELED CIPSOv4
-[    0.578528] NetLabel:  unlabeled traffic allowed by default
-[    0.580080] amd_nb: Cannot enumerate AMD northbridges
-[    0.581096] clocksource: Switched to clocksource kvm-clock
-[    0.589090] AppArmor: AppArmor Filesystem Enabled
-[    0.590185] pnp: PnP ACPI init
-[    0.591606] pnp: PnP ACPI: found 3 devices
-[    0.601389] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
-[    0.603699] NET: Registered protocol family 2
-[    0.604879] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
-[    0.606242] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
-[    0.607462] TCP: Hash tables configured (established 8192 bind 8192)
-[    0.608694] UDP hash table entries: 512 (order: 2, 16384 bytes)
-[    0.609835] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
-[    0.611036] NET: Registered protocol family 1
-[    0.611971] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
-[    0.613057] pci 0000:00:01.0: Activating ISA DMA hang workarounds
-[    0.614293] Unpacking initramfs...
-[    0.857983] Freeing initrd memory: 14832K
-[    0.859095] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x22982c12b6d, max_idle_ns: 440795281273 ns
-[    0.860914] platform rtc_cmos: registered platform RTC device (no PNP device found)
-[    0.862516] Scanning for low memory corruption every 60 seconds
-[    0.864315] audit: initializing netlink subsys (disabled)
-[    0.865803] audit: type=2000 audit(1568253385.577:1): initialized
-[    0.867251] Initialise system trusted keyring
-[    0.868248] HugeTLB registered 2 MB page size, pre-allocated 0 pages
-[    0.871179] zbud: loaded
-[    0.872439] VFS: Disk quotas dquot_6.6.0
-[    0.873272] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-[    0.874881] squashfs: version 4.0 (2009/01/31) Phillip Lougher
-[    0.876277] fuse init (API version 7.23)
-[    0.877256] Key type big_key registered
-[    0.878156] Allocating IMA MOK and blacklist keyrings.
-[    0.880128] Key type asymmetric registered
-[    0.881250] Asymmetric key parser 'x509' registered
-[    0.882459] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
-[    0.884192] io scheduler noop registered
-[    0.884980] io scheduler deadline registered (default)
-[    0.886100] io scheduler cfq registered
-[    0.887262] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
-[    0.888391] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
-[    0.889690] ACPI: AC Adapter [AC] (off-line)
-[    0.890576] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
-[    0.892009] ACPI: Power Button [PWRF]
-[    0.892843] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
-[    0.894341] ACPI: Sleep Button [SLPF]
-[    0.895878] ACPI: Battery Slot [BAT0] (battery present)
-[    0.896868] GHES: HEST is not enabled!
-[    0.897868] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.000000] tsc: Detected 2399.998 MHz processor
+[    0.141405] Calibrating delay loop (skipped) preset value.. 4799.99 BogoMIPS (lpj=9599992)
+[    0.143250] pid_max: default: 32768 minimum: 301
+[    0.144604] ACPI: Core revision 20150930
+[    0.146639] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.147857] Security Framework initialized
+[    0.148653] Yama: becoming mindful.
+[    0.149414] AppArmor: AppArmor initialized
+[    0.150293] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.152097] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.153369] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.154495] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.155825] Initializing cgroup subsys io
+[    0.156593] Initializing cgroup subsys memory
+[    0.157458] Initializing cgroup subsys devices
+[    0.158291] Initializing cgroup subsys freezer
+[    0.159569] Initializing cgroup subsys net_cls
+[    0.161023] Initializing cgroup subsys perf_event
+[    0.162153] Initializing cgroup subsys net_prio
+[    0.163009] Initializing cgroup subsys hugetlb
+[    0.163840] Initializing cgroup subsys pids
+[    0.165910] mce: CPU supports 0 MCE banks
+[    0.166728] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.167687] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.168901] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.170630] Spectre V2 : Mitigation: Full generic retpoline
+[    0.171707] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.173407] Speculative Store Bypass: Vulnerable
+[    0.174431] MDS: Vulnerable: Clear CPU buffers attempted, no microcode
+[    0.179539] Freeing SMP alternatives memory: 36K
+[    0.186989] ftrace: allocating 32318 entries in 127 pages
+[    0.254178] smpboot: APIC(0) Converting physical 0 to logical package 0
+[    0.255424] smpboot: Max logical packages: 1
+[    0.256487] x2apic enabled
+[    0.257362] Switched APIC routing to physical x2apic.
+[    0.259445] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.368168] smpboot: CPU0: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz (family: 0x6, model: 0x4e, stepping: 0x3)
+[    0.370126] Performance Events: unsupported p6 CPU model 78 no PMU driver, software events only.
+[    0.386687] KVM setup paravirtual spinlock
+[    0.388385] x86: Booting SMP configuration:
+[    0.389196] .... node  #0, CPUs:      #1
+[    0.390040] kvm-clock: cpu 1, msr 0:3ffe3041, secondary cpu clock
+[    0.392421] mce: CPU supports 0 MCE banks
+[    0.395713] x86: Booted up 1 node, 2 CPUs
+[    0.396791] smpboot: Total of 2 processors activated (9599.99 BogoMIPS)
+[    0.398430] devtmpfs: initialized
+[    0.401154] evm: security.selinux
+[    0.401849] evm: security.SMACK64
+[    0.402536] evm: security.SMACK64EXEC
+[    0.403275] evm: security.SMACK64TRANSMUTE
+[    0.404064] evm: security.SMACK64MMAP
+[    0.404806] evm: security.ima
+[    0.405450] evm: security.capability
+[    0.406511] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.408452] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.410177] pinctrl core: initialized pinctrl subsystem
+[    0.411562] RTC time:  2:46:06, date: 09/23/19
+[    0.412790] NET: Registered protocol family 16
+[    0.424901] cpuidle: using governor ladder
+[    0.436844] cpuidle: using governor menu
+[    0.437756] PCCT header not found.
+[    0.439389] ACPI: bus type PCI registered
+[    0.441217] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.443112] PCI: Using configuration type 1 for base access
+[    0.457986] ACPI: Added _OSI(Module Device)
+[    0.459029] ACPI: Added _OSI(Processor Device)
+[    0.460182] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.461205] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.463113] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.466561] ACPI: Interpreter enabled
+[    0.467374] ACPI: (supports S0 S5)
+[    0.468101] ACPI: Using IOAPIC for interrupt routing
+[    0.469286] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.474789] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.476150] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.478308] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.480317] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.482846] PCI host bridge to bus 0000:00
+[    0.483688] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.485006] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.486258] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.487756] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
+[    0.489537] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.492628] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.494321] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.495710] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.497198] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.527963] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.529729] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.537310] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.538980] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.540503] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.542354] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.544305] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.546033] vgaarb: setting as boot device: PCI:0000:00:02.0
+[    0.547102] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.548801] vgaarb: loaded
+[    0.549467] vgaarb: bridge control possible 0000:00:02.0
+[    0.550836] SCSI subsystem initialized
+[    0.551706] ACPI: bus type USB registered
+[    0.552524] usbcore: registered new interface driver usbfs
+[    0.553515] usbcore: registered new interface driver hub
+[    0.554472] usbcore: registered new device driver usb
+[    0.555559] PCI: Using ACPI for IRQ routing
+[    0.556644] NetLabel: Initializing
+[    0.557341] NetLabel:  domain hash size = 128
+[    0.558283] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.560017] NetLabel:  unlabeled traffic allowed by default
+[    0.561562] amd_nb: Cannot enumerate AMD northbridges
+[    0.562669] clocksource: Switched to clocksource kvm-clock
+[    0.570291] AppArmor: AppArmor Filesystem Enabled
+[    0.571298] pnp: PnP ACPI init
+[    0.572705] pnp: PnP ACPI: found 3 devices
+[    0.583135] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.584870] NET: Registered protocol family 2
+[    0.585890] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.587109] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    0.588220] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.589320] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.590347] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.591533] NET: Registered protocol family 1
+[    0.592879] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.594123] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.595468] Unpacking initramfs...
+[    0.831832] Freeing initrd memory: 14832K
+[    0.832864] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x229835b7123, max_idle_ns: 440795242976 ns
+[    0.834762] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    0.836244] Scanning for low memory corruption every 60 seconds
+[    0.837662] audit: initializing netlink subsys (disabled)
+[    0.838645] audit: type=2000 audit(1569206771.647:1): initialized
+[    0.840136] Initialise system trusted keyring
+[    0.841488] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.844904] zbud: loaded
+[    0.846223] VFS: Disk quotas dquot_6.6.0
+[    0.847083] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.848647] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.850047] fuse init (API version 7.23)
+[    0.850947] Key type big_key registered
+[    0.851767] Allocating IMA MOK and blacklist keyrings.
+[    0.853458] Key type asymmetric registered
+[    0.854288] Asymmetric key parser 'x509' registered
+[    0.855295] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    0.856777] io scheduler noop registered
+[    0.857545] io scheduler deadline registered (default)
+[    0.858698] io scheduler cfq registered
+[    0.859960] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.861044] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    0.862428] ACPI: AC Adapter [AC] (off-line)
+[    0.863390] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.864817] ACPI: Power Button [PWRF]
+[    0.865616] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    0.867039] ACPI: Sleep Button [SLPF]
+[    0.868628] ACPI: Battery Slot [BAT0] (battery present)
+[    0.869596] GHES: HEST is not enabled!
+[    0.870478] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
  	
- !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ[    0.921304] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
-[    0.923895] Linux agpgart interface v0.103
-[    0.926120] loop: module loaded
-[    0.927395] scsi host0: ata_piix
-[    0.928219] scsi host1: ata_piix
-[    0.928976] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
-[    0.930164] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
-[    0.932182] libphy: Fixed MDIO Bus: probed
-[    0.933116] tun: Universal TUN/TAP device driver, 1.6
-[    0.934269] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
-[    0.935533] PPP generic driver version 2.4.2
-[    0.936596] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-[    0.937999] ehci-pci: EHCI PCI platform driver
-[    0.938955] ehci-platform: EHCI generic platform driver
-[    0.939926] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
-[    0.941000] ohci-pci: OHCI PCI platform driver
-[    0.941874] ohci-platform: OHCI generic platform driver
-[    0.942853] uhci_hcd: USB Universal Host Controller Interface driver
-[    0.944054] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-[    0.946114] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    0.947027] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    0.948102] mousedev: PS/2 mouse device common for all mice
-[    0.949990] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
-[    0.951301] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
-[    0.953166] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
-[    0.954736] i2c /dev entries driver
-[    0.955584] device-mapper: uevent: version 1.0.3
-[    0.956528] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
-[    0.958162] ledtrig-cpu: registered to indicate activity on CPUs
-[    0.959559] NET: Registered protocol family 10
-[    0.960596] NET: Registered protocol family 17
-[    0.961447] Key type dns_resolver registered
-[    0.962554] registered taskstats version 1
-[    0.963397] Loading compiled-in X.509 certificates
-[    0.964946] Loaded X.509 cert 'Build time autogenerated kernel key: d14182f9795b80ec340f636a5a08bf5817ccd8e7'
-[    0.967325] zswap: loaded using pool lzo/zbud
-[    0.970257] Key type trusted registered
-[    0.974257] Key type encrypted registered
-[    0.975172] AppArmor: AppArmor sha1 policy hashing enabled
-[    0.976268] ima: No TPM chip found, activating TPM-bypass!
-[    0.977358] ima: Allocated hash algorithm: sha1
-[    0.978444] evm: HMAC attrs: 0x1
-[    0.979548]   Magic number: 3:912:912
-[    0.980508] rtc_cmos rtc_cmos: setting system clock to 2019-09-12 01:56:21 UTC (1568253381)
-[    0.982535] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
-[    0.983992] EDD information not available.
-[    1.094325] Freeing unused kernel memory: 1488K
-[    1.098912] Write protecting the kernel read-only data: 14336k
-[    1.107394] Freeing unused kernel memory: 1608K
-[    1.111423] Freeing unused kernel memory: 64K
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄€‹›ﬁﬂ‡·‚„‰ÂÊÁËÈÍÎÏÌÓÔÒÚÛÙıˆ˜¯˘˙˚¸˝˛ˇ[    0.893703] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    0.896579] Linux agpgart interface v0.103
+[    0.899035] loop: module loaded
+[    0.900328] scsi host0: ata_piix
+[    0.901141] scsi host1: ata_piix
+[    0.901868] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    0.903054] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    0.904577] libphy: Fixed MDIO Bus: probed
+[    0.905405] tun: Universal TUN/TAP device driver, 1.6
+[    0.906368] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.907527] PPP generic driver version 2.4.2
+[    0.908435] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.910157] ehci-pci: EHCI PCI platform driver
+[    0.911077] ehci-platform: EHCI generic platform driver
+[    0.912385] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.913631] ohci-pci: OHCI PCI platform driver
+[    0.914537] ohci-platform: OHCI generic platform driver
+[    0.915587] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.916804] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    0.918931] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.919837] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.920863] mousedev: PS/2 mouse device common for all mice
+[    0.922381] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    0.924112] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    0.925308] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    0.927046] i2c /dev entries driver
+[    0.927956] device-mapper: uevent: version 1.0.3
+[    0.929037] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    0.930700] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.932194] NET: Registered protocol family 10
+[    0.933234] NET: Registered protocol family 17
+[    0.934154] Key type dns_resolver registered
+[    0.935442] registered taskstats version 1
+[    0.936249] Loading compiled-in X.509 certificates
+[    0.937779] Loaded X.509 cert 'Build time autogenerated kernel key: d14182f9795b80ec340f636a5a08bf5817ccd8e7'
+[    0.939590] zswap: loaded using pool lzo/zbud
+[    0.942487] Key type trusted registered
+[    0.947781] Key type encrypted registered
+[    0.948668] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.949841] ima: No TPM chip found, activating TPM-bypass!
+[    0.950860] ima: Allocated hash algorithm: sha1
+[    0.951717] evm: HMAC attrs: 0x1
+[    0.952658]   Magic number: 3:193:764
+[    0.953403] event_source breakpoint: hash matches
+[    0.954337] rtc_cmos rtc_cmos: setting system clock to 2019-09-23 02:46:07 UTC (1569206767)
+[    0.956066] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    0.957119] EDD information not available.
+[    1.066392] Freeing unused kernel memory: 1488K
+[    1.071089] Write protecting the kernel read-only data: 14336k
+[    1.078225] Freeing unused kernel memory: 1608K
+[    1.085045] Freeing unused kernel memory: 64K
 Loading, please wait...
 starting version 229
-[    1.133289] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.134042] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.134069] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.140151] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.142126] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.143396] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.143440] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.143576] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.143624] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.143669] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
-[    1.187041] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
-[    1.188837] e1000: Copyright (c) 1999-2006 Intel Corporation.
-[    1.192338] Fusion MPT base driver 3.04.20
-[    1.193415] Copyright (c) 1999-2008 LSI Corporation
-[    1.211666] Fusion MPT SPI Host driver 3.04.20
-[    1.215531] AVX2 version of gcm_enc/dec engaged.
-[    1.216454] AES CTR mode by8 optimization enabled
-[    1.394690] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
-[    1.561768] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:49:b7:a9:fe:dc
-[    1.563077] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
-[    1.565941] e1000 0000:00:03.0 enp0s3: renamed from eth0
-[    1.567187] mptbase: ioc0: Initiating bringup
-[    1.793976] ioc0: LSI53C1030 A0: Capabilities={Initiator}
-[    3.584449] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
-[    4.434516] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
-[    4.447658] scsi target2:0:0: Beginning Domain Validation
-[    4.459771] scsi target2:0:0: Domain Validation skipping write tests
-[    4.466946] scsi target2:0:0: Ending Domain Validation
-[    4.474073] scsi target2:0:0: asynchronous
-[    4.481715] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
-[    4.486989] scsi target2:0:1: Beginning Domain Validation
-[    4.492607] scsi target2:0:1: Domain Validation skipping write tests
-[    4.494940] scsi target2:0:1: Ending Domain Validation
-[    4.496896] scsi target2:0:1: asynchronous
-[    4.518639] sd 2:0:0:0: Attached scsi generic sg0 type 0
-[    4.519977] sd 2:0:0:0: [sda] 20971520 512-byte logical blocks: (10.7 GB/10.0 GiB)
-[    4.522391] sd 2:0:1:0: Attached scsi generic sg1 type 0
-[    4.523491] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
-[    4.525122] sd 2:0:0:0: [sda] Write Protect is off
-[    4.525254] sd 2:0:1:0: [sdb] Write Protect is off
-[    4.525333] sd 2:0:1:0: [sdb] Incomplete mode parameter data
-[    4.525335] sd 2:0:1:0: [sdb] Assuming drive cache: write through
-[    4.530743] sd 2:0:0:0: [sda] Incomplete mode parameter data
-[    4.532125] sd 2:0:0:0: [sda] Assuming drive cache: write through
-[    4.532303] sd 2:0:1:0: [sdb] Attached SCSI disk
-[    4.535191]  sda: sda1
-[    4.536516] sd 2:0:0:0: [sda] Attached SCSI disk
-Begin: Loading essential drivers ... [    5.958691] md: linear personality registered for level -1
-[    5.962493] md: multipath personality registered for level -4
-[    5.966292] md: raid0 personality registered for level 0
-[    5.972487] md: raid1 personality registered for level 1
-[    6.045674] raid6: sse2x1   gen()  8625 MB/s
-[    6.116499] raid6: sse2x1   xor()  6621 MB/s
-[    6.192727] raid6: sse2x2   gen() 12000 MB/s
-[    6.261479] raid6: sse2x2   xor()  7571 MB/s
-[    6.333257] raid6: sse2x4   gen() 11665 MB/s
-[    6.402665] raid6: sse2x4   xor()  8176 MB/s
-[    6.472701] raid6: avx2x1   gen() 15770 MB/s
-[    6.544549] raid6: avx2x2   gen() 21029 MB/s
-[    6.622747] raid6: avx2x4   gen() 25740 MB/s
-[    6.623733] raid6: using algorithm avx2x4 gen() 25740 MB/s
-[    6.624709] raid6: using avx2x2 recovery algorithm
-[    6.627083] xor: automatically using best checksumming function:
-[    6.665151]    avx       : 19406.000 MB/sec
-[    6.667390] async_tx: api initialized (async)
-[    6.680598] md: raid6 personality registered for level 6
-[    6.681692] md: raid5 personality registered for level 5
-[    6.682662] md: raid4 personality registered for level 4
-[    6.690797] md: raid10 personality registered for level 10
+[    1.160124] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.163282] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.163452] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.180868] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.184693] random: systemd-udevd: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.186124] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.186187] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.186378] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.186450] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.186519] random: udevadm: uninitialized urandom read (16 bytes read, 3 bits of entropy available)
+[    1.239303] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    1.240626] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    1.241890] Fusion MPT base driver 3.04.20
+[    1.242808] Copyright (c) 1999-2008 LSI Corporation
+[    1.265147] AVX2 version of gcm_enc/dec engaged.
+[    1.266403] AES CTR mode by8 optimization enabled
+[    1.269913] Fusion MPT SPI Host driver 3.04.20
+[    1.458894] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+[    1.611417] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:49:b7:a9:fe:dc
+[    1.612729] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    1.614850] mptbase: ioc0: Initiating bringup
+[    1.615159] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[    1.691801] ioc0: LSI53C1030 A0: Capabilities={Initiator}
+[    2.758427] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
+[    3.435898] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    3.440645] scsi target2:0:0: Beginning Domain Validation
+[    3.444924] scsi target2:0:0: Domain Validation skipping write tests
+[    3.447248] scsi target2:0:0: Ending Domain Validation
+[    3.448854] scsi target2:0:0: asynchronous
+[    3.450578] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    3.452663] scsi target2:0:1: Beginning Domain Validation
+[    3.454885] scsi target2:0:1: Domain Validation skipping write tests
+[    3.456272] scsi target2:0:1: Ending Domain Validation
+[    3.469190] scsi target2:0:1: asynchronous
+[    3.474200] sd 2:0:0:0: [sda] 20971520 512-byte logical blocks: (10.7 GB/10.0 GiB)
+[    3.474490] sd 2:0:0:0: Attached scsi generic sg0 type 0
+[    3.477489] sd 2:0:0:0: [sda] Write Protect is off
+[    3.478073] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
+[    3.478350] sd 2:0:1:0: [sdb] Write Protect is off
+[    3.478509] sd 2:0:1:0: [sdb] Incomplete mode parameter data
+[    3.478511] sd 2:0:1:0: [sdb] Assuming drive cache: write through
+[    3.482785] sd 2:0:1:0: Attached scsi generic sg1 type 0
+[    3.484966] sd 2:0:1:0: [sdb] Attached SCSI disk
+[    3.486919] sd 2:0:0:0: [sda] Incomplete mode parameter data
+[    3.487905] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    3.489995]  sda: sda1
+[    3.491282] sd 2:0:0:0: [sda] Attached SCSI disk
+Begin: Loading essential drivers ... [    4.952001] md: linear personality registered for level -1
+[    4.956032] md: multipath personality registered for level -4
+[    4.960885] md: raid0 personality registered for level 0
+[    4.966092] md: raid1 personality registered for level 1
+[    5.038704] raid6: sse2x1   gen()  8645 MB/s
+[    5.106698] raid6: sse2x1   xor()  6684 MB/s
+[    5.174748] raid6: sse2x2   gen() 11042 MB/s
+[    5.242756] raid6: sse2x2   xor()  7344 MB/s
+[    5.310734] raid6: sse2x4   gen() 11942 MB/s
+[    5.378723] raid6: sse2x4   xor()  8086 MB/s
+[    5.446751] raid6: avx2x1   gen() 15316 MB/s
+[    5.514782] raid6: avx2x2   gen() 18844 MB/s
+[    5.582778] raid6: avx2x4   gen() 21910 MB/s
+[    5.583778] raid6: using algorithm avx2x4 gen() 21910 MB/s
+[    5.584883] raid6: using avx2x2 recovery algorithm
+[    5.587395] xor: automatically using best checksumming function:
+[    5.639162]    avx       : 41406.000 MB/sec
+[    5.641412] async_tx: api initialized (async)
+[    5.652884] md: raid6 personality registered for level 6
+[    5.653887] md: raid5 personality registered for level 5
+[    5.654885] md: raid4 personality registered for level 4
+[    5.661937] md: raid10 personality registered for level 10
 done.
 Begin: Running /scripts/init-premount ... done.
 Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
-Begin: Running /scripts/local-premount ... [    6.723723] Btrfs loaded
+Begin: Running /scripts/local-premount ... [    5.700486] Btrfs loaded
 Scanning for Btrfs filesystems
 done.
 Warning: fsck not present, so skipping root file system
-[    6.757425] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[    5.733986] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
 done.
 Begin: Running /scripts/local-bottom ... done.
 Begin: Running /scripts/init-bottom ... done.
-[    6.903250] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
-[    6.911136] systemd[1]: Detected virtualization oracle.
-[    6.913093] systemd[1]: Detected architecture x86-64.
+[    5.853399] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[    5.857473] systemd[1]: Detected virtualization oracle.
+[    5.858809] systemd[1]: Detected architecture x86-64.
 
 Welcome to [1mUbuntu 16.04.6 LTS[0m!
 
-[    6.917852] systemd[1]: Set hostname to <utn-devops>.
-[    7.728820] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.744182] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.753433] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.759985] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.765309] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.769073] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.773642] systemd-fstab-generator[361]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[    7.818422] systemd[346]: /lib/systemd/system-generators/systemd-fstab-generator failed with error code 1.
-[    7.879895] systemd[1]: Listening on udev Control Socket.
-[[0;32m  OK  [0m] Listening on udev Control Socket.
-[    8.411780] systemd[1]: Created slice User and Session Slice.
-[[0;32m  OK  [0m] Created slice User and Session Slice.
-[    8.424401] systemd[1]: Reached target Encrypted Volumes.
-[[0;32m  OK  [0m] Reached target Encrypted Volumes.
-[    8.437581] systemd[1]: Started Trigger resolvconf update for networkd DNS.
-[[0;32m  OK  [0m] Started Trigger resolvconf update for networkd DNS.
-[    8.453917] systemd[1]: Created slice System Slice.
-[[0;32m  OK  [0m] Created slice System Slice.
-[    8.468156] systemd[1]: Listening on Journal Audit Socket.
-[[0;32m  OK  [0m] Listening on Journal Audit Socket.
-[    8.475497] systemd[1]: Listening on udev Kernel Socket.
-[[0;32m  OK  [0m] Listening on udev Kernel Socket.
-[    8.480399] systemd[1]: Listening on Device-mapper event daemon FIFOs.
-[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
-[    8.485270] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
-[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
-[    8.490329] systemd[1]: Created slice system-serial\x2dgetty.slice.
-[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
-[    8.493743] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
-[[0;32m  OK  [0m] Set up automount Arbitrary Executab...ats File System Automount Point.
-[    8.497436] systemd[1]: Reached target System Time Synchronized.
-[[0;32m  OK  [0m] Reached target System Time Synchronized.
-[    8.500047] systemd[1]: Listening on Journal Socket (/dev/log).
-[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
-[    8.502324] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
-[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
-[    8.505147] systemd[1]: Listening on Journal Socket.
+[    5.861975] systemd[1]: Set hostname to <utn-devops>.
+[    5.887453] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.891887] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.897221] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.901977] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.905567] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.909136] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.919168] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.922203] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.925521] systemd-fstab-generator[352]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[    5.929416] systemd[337]: /lib/systemd/system-generators/systemd-fstab-generator failed with error code 1.
+[    6.022229] systemd[1]: Listening on Journal Socket.
 [[0;32m  OK  [0m] Listening on Journal Socket.
-[    8.521450] systemd[1]: Starting Remount Root and Kernel File Systems...
-         Starting Remount Root and Kernel File Systems...
-[    8.524809] systemd[1]: Starting Set console keymap...
-         Starting Set console keymap...
-[    8.528945] systemd[1]: Starting Create list of required static device nodes for the current kernel...
-         Starting Create list of required st... nodes for the current kernel...
-[    8.532898] systemd[1]: Starting Uncomplicated firewall...
-         Starting Uncomplicated firewall...
-[    8.537538] systemd[1]: Mounting POSIX Message Queue File System...
-[    8.538818] EXT4-fs (sda1): re-mounted. Opts: (null)
-         Mounting POSIX Message Queue File System...
-[    8.542356] systemd[1]: Mounting Debug File System...
-         Mounting Debug File System...
-[    8.546365] systemd[1]: Starting Nameserver information manager...
-         Starting Nameserver information manager...
-[    8.550846] systemd[1]: Starting Load Kernel Modules...
-         Starting Load Kernel Modules...
-[    8.557498] systemd[1]: Listening on Syslog Socket.
+[    6.024288] systemd[1]: Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+[    6.026278] systemd[1]: Started Trigger resolvconf update for networkd DNS.
+[[0;32m  OK  [0m] Started Trigger resolvconf update for networkd DNS.
+[    6.028952] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+[    6.032185] systemd[1]: Listening on Syslog Socket.
 [[0;32m  OK  [0m] Listening on Syslog Socket.
-[    8.560047] Loading iSCSI transport class v2.0-870.
-[    8.560852] systemd[1]: Starting Journal Service...
-         Starting Journal Service...
-[    8.564223] systemd[1]: Mounting Huge Pages File System...
+[    6.034347] systemd[1]: Created slice System Slice.
+[[0;32m  OK  [0m] Created slice System Slice.
+[    6.059132] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required st... nodes for the current kernel...
+[    6.064314] systemd[1]: Mounting Huge Pages File System...
          Mounting Huge Pages File System...
-[    8.567226] systemd[1]: Reached target User and Group Name Lookups.
-[[0;32m  OK  [0m] Reached target User and Group Name Lookups.
-[    8.571200] systemd[1]: Reached target Slices.
-[[0;32m  OK  [0m] Reached target Slices.
-[    8.576298] iscsi: registered transport (tcp)
-[    8.581342] systemd[1]: Listening on LVM2 poll daemon socket.
-[[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.
-[    8.583376] systemd[1]: Listening on LVM2 metadata daemon socket.
+[    6.068439] systemd[1]: Mounting Debug File System...
+         Mounting Debug File System...
+[    6.073845] systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting POSIX Message Queue File System...
+[    6.078274] systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
+[    6.080881] systemd[1]: Listening on LVM2 metadata daemon socket.
 [[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
-[    8.586253] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    6.084149] systemd[1]: Starting Nameserver information manager...
+         Starting Nameserver information manager...
+[    6.086402] systemd[1]: Listening on Journal Audit Socket.
+[[0;32m  OK  [0m] Listening on Journal Audit Socket.
+[    6.089169] systemd[1]: Starting Uncomplicated firewall...
+         Starting Uncomplicated firewall...
+[    6.092151] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[[0;32m  OK  [0m] Set up automount Arbitrary Executab...ats File System Automount Point.
+[    6.104109] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
+[    6.106721] systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+[    6.110400] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[    6.112701] systemd[1]: Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[    6.120403] Loading iSCSI transport class v2.0-870.
+[    6.123722] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
          Starting Monitoring of LVM2 mirrors... dmeventd or progress polling...
-[    8.594585] systemd[1]: Mounted Debug File System.
+[    6.127910] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+[    6.131511] systemd[1]: Listening on LVM2 poll daemon socket.
+[    6.133375] iscsi: registered transport (tcp)
+[[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.
+[    6.135652] systemd[1]: Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice User and Session Slice.
+[    6.138337] systemd[1]: Reached target Slices.
+[[0;32m  OK  [0m] Reached target Slices.
+[    6.140532] systemd[1]: Reached target User and Group Name Lookups.
+[[0;32m  OK  [0m] Reached target User and Group Name Lookups.
+[    6.146827] systemd[1]: Starting Remount Root and Kernel File Systems...
+         Starting Remount Root and Kernel File Systems...
+[    6.150653] systemd[1]: Reached target Encrypted Volumes.
+[    6.152464] EXT4-fs (sda1): re-mounted. Opts: (null)
+[[0;32m  OK  [0m] Reached target Encrypted Volumes.
+[    6.154739] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+[    6.158350] systemd[1]: Starting Journal Service...
+         Starting Journal Service...
+[    6.164046] systemd[1]: Starting Set console keymap...
+         Starting Set console keymap...
+[    6.169433] systemd[1]: Mounted Debug File System.
 [[0;32m  OK  [0m] Mounted Debug File System.
-[    8.596579] systemd[1]: Mounted Huge Pages File System.
-[[0;32m  OK  [0m] [    8.598065] random: nonblocking pool is initialized
-Mounted Huge Pages File System.
-[    8.599522] systemd[1]: Mounted POSIX Message Queue File System.
+[    6.171951] systemd[1]: Mounted Huge Pages File System.
+[[0;32m  OK  [0m] Mounted Huge Pages File System.
+[    6.174449] systemd[1]: Mounted POSIX Message Queue File System.
 [[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
-[    8.602679] systemd[1]: Started Journal Service.
-[[0;32m  OK  [0m] Started Journal Service.
-[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+[    6.177557] systemd[1]: Started Create list of required static device nodes for the current kernel.
 [[0;32m  OK  [0m] Started Create list of required sta...ce nodes for the current kernel.
+[    6.186127] systemd[1]: Started Uncomplicated firewall.
 [[0;32m  OK  [0m] Started Uncomplicated firewall.
-[    8.626989] iscsi: registered transport (iser)
-[[0;32m  OK  [0m] Started Set console keymap.
-[[0;32m  OK  [0m] Started Load Kernel Modules.
+[    6.189140] systemd[1]: Started Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+[    6.195641] systemd[1]: Started Nameserver information manager.
+[    6.196192] iscsi: registered transport (iser)
 [[0;32m  OK  [0m] Started Nameserver information manager.
-[[0;32m  OK  [0m] Started LVM2 metadata daemon.
-         Starting Apply Kernel Variables...
+[    6.209024] systemd[1]: Started Load Kernel Modules.
+[[0;32m  OK  [0m] Started Load Kernel Modules.
+[    6.225916] systemd[1]: Started Journal Service.
+[[0;32m  OK  [0m] Started Journal Service.
+[[0;32m  OK  [0m] Started Set console keymap.
          Mounting FUSE Control File System...
-         Starting Create Static Device Nodes in /dev...
-         Starting Load/Save Random Seed...
+         Starting Apply Kernel Variables...
+[[0;32m  OK  [0m] Started LVM2 metadata daemon.
+         Starting Flush Journal to Persistent Storage...
          Starting udev Coldplug all Devices...
          Activating swap /swapdir/swapfile...
-         Starting Flush Journal to Persistent Storage...
+         Starting Load/Save Random Seed...
+         Starting Create Static Device Nodes in /dev...
 [[0;32m  OK  [0m] Mounted FUSE Control File System.
-[[0;32m  OK  [0m] Started Load/Save Random Seed.
 [[0;32m  OK  [0m] Started Apply Kernel Variables.
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
 [[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
-         Starting udev Kernel Device Manager...
-[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
 [[0;32m  OK  [0m] Activated swap /swapdir/swapfile.
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
 [[0;32m  OK  [0m] Reached target Swap.
+         Starting udev Kernel Device Manager...
 [[0;32m  OK  [0m] Started udev Coldplug all Devices.
 [[0;32m  OK  [0m] Started udev Kernel Device Manager.
 [[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
 [[0;32m  OK  [0m] Found device /dev/ttyS0.
 [[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
-[[0;32m  OK  [0m] Found device 82540EM Gigabit Ethern...r (PRO/1000 MT Desktop Adapter).
 [[0;32m  OK  [0m] Started Monitoring of LVM2 mirrors,...ng dmeventd or progress polling.
 [[0;32m  OK  [0m] Reached target Local File Systems (Pre).
 [[0;32m  OK  [0m] Reached target Local File Systems.
          Starting Create Volatile Files and Directories...
-         Starting Initial cloud-init job (pre-networking)...
          Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Initial cloud-init job (pre-networking)...
          Starting LSB: AppArmor initialization...
          Starting Set console font and keymap...
 [[0;32m  OK  [0m] Started Create Volatile Files and Directories.
@@ -509,55 +515,55 @@ Mounted Huge Pages File System.
 [[0;32m  OK  [0m] Started LSB: AppArmor initialization.
 [[0;32m  OK  [0m] Started Set console font and keymap.
 [[0;32m  OK  [0m] Created slice system-getty.slice.
-[   10.074643] cloud-init[618]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'init-local' at Thu, 12 Sep 2019 01:56:30 +0000. Up 9.79 seconds.
+[    7.814207] cloud-init[617]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'init-local' at Mon, 23 Sep 2019 02:46:14 +0000. Up 7.50 seconds.
 [[0;32m  OK  [0m] Started Initial cloud-init job (pre-networking).
 [[0;32m  OK  [0m] Reached target Network (Pre).
-[[0;32m  OK  [0m] Started ifup for enp0s3.
          Starting Raise network interfaces...
+[[0;32m  OK  [0m] Started ifup for enp0s3.
 [[0;32m  OK  [0m] Started Raise network interfaces.
-         Starting Initial cloud-init job (metadata service crawler)...
 [[0;32m  OK  [0m] Reached target Network.
-[   10.881851] cloud-init[983]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'init' at Thu, 12 Sep 2019 01:56:31 +0000. Up 10.61 seconds.
-[   10.889948] cloud-init[983]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
-[   10.892186] cloud-init[983]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
-[   10.896064] cloud-init[983]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
-[   10.898043] cloud-init[983]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
-[   10.909942] cloud-init[983]: ci-info: | enp0s3 | True |         10.0.2.15          | 255.255.255.0 | global | 02:49:b7:a9:fe:dc |
-[   10.912596] cloud-init[983]: ci-info: | enp0s3 | True | fe80::49:b7ff:fea9:fedc/64 |       .       |  link  | 02:49:b7:a9:fe:dc |
-[   10.914456] cloud-init[983]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
-[   10.916382] cloud-init[983]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
-[   10.918137] cloud-init[983]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
-[   10.919594] cloud-init[983]: ci-info: +++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++
-[   10.922057] cloud-init[983]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
-[   10.923765] cloud-init[983]: ci-info: | Route | Destination | Gateway  |    Genmask    | Interface | Flags |
-[   10.925407] cloud-init[983]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
-[   10.940295] cloud-init[983]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |    0.0.0.0    |   enp0s3  |   UG  |
-[   10.942088] cloud-init[983]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  | 255.255.255.0 |   enp0s3  |   U   |
-[   10.944667] cloud-init[983]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
+         Starting Initial cloud-init job (metadata service crawler)...
+[    8.606440] cloud-init[976]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'init' at Mon, 23 Sep 2019 02:46:15 +0000. Up 8.34 seconds.
+[    8.608495] cloud-init[976]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+[    8.610167] cloud-init[976]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    8.611704] cloud-init[976]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+[    8.613358] cloud-init[976]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    8.616378] cloud-init[976]: ci-info: | enp0s3 | True |         10.0.2.15          | 255.255.255.0 | global | 02:49:b7:a9:fe:dc |
+[    8.620204] cloud-init[976]: ci-info: | enp0s3 | True | fe80::49:b7ff:fea9:fedc/64 |       .       |  link  | 02:49:b7:a9:fe:dc |
+[    8.624448] cloud-init[976]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[    8.626197] cloud-init[976]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+[    8.627773] cloud-init[976]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[    8.632341] cloud-init[976]: ci-info: +++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++
+[    8.636423] cloud-init[976]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
+[    8.637607] cloud-init[976]: ci-info: | Route | Destination | Gateway  |    Genmask    | Interface | Flags |
+[    8.638964] cloud-init[976]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
+[    8.640389] cloud-init[976]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |    0.0.0.0    |   enp0s3  |   UG  |
+[    8.644309] cloud-init[976]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  | 255.255.255.0 |   enp0s3  |   U   |
+[    8.648334] cloud-init[976]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
+[    8.649799] cloud-init[976]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[    8.652302] cloud-init[976]: ci-info: +-------+-------------+---------+-----------+-------+
+[    8.656305] cloud-init[976]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[    8.657569] cloud-init[976]: ci-info: +-------+-------------+---------+-----------+-------+
+[    8.660335] cloud-init[976]: ci-info: |   0   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[    8.664399] cloud-init[976]: ci-info: |   3   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[    8.668476] cloud-init[976]: ci-info: +-------+-------------+---------+-----------+-------+
 [[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
-[   10.960175] cloud-init[983]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
-[   10.962566] cloud-init[983]: ci-info: +-------+-------------+---------+-----------+-------+
-[[0;32m  OK  [0m] Reached target Network is Online.
-[   10.965580] cloud-init[983]: ci-info: | Route | Destination | Gateway | Interface | Flags |
-[   10.967005] cloud-init[983]: ci-info: +-------+-------------+---------+-----------+-------+
-[   10.968406] cloud-init[983]: ci-info: |   0   |  fe80::/64  |    ::   |   enp0s3  |   U   |
-[   10.969769] cloud-init[983]: ci-info: |   3   |   ff00::/8  |    ::   |   enp0s3  |   U   |
-[   10.971159] cloud-init[983]: ci-info: +-------+-------------+---------+-----------+-------+
-         Starting iSCSI initiator daemon (iscsid)...
 [[0;32m  OK  [0m] Reached target Cloud-config availability.
+[[0;32m  OK  [0m] Reached target Network is Online.
+         Starting iSCSI initiator daemon (iscsid)...
 [[0;32m  OK  [0m] Reached target System Initialization.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+         Starting Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+         Starting Docker Socket for the API.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
 [[0;32m  OK  [0m] Started ACPI Events Check.
 [[0;32m  OK  [0m] Reached target Paths.
 [[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
-[[0;32m  OK  [0m] Started Daily apt download activities.
-[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
-         Starting Socket activation for snappy daemon.
-         Starting Docker Socket for the API.
-[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
 [[0;32m  OK  [0m] Reached target Timers.
          Starting LXD - unix socket.
-[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
-[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
 [[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
 [[0;32m  OK  [0m] Listening on Docker Socket for the API.
 [[0;32m  OK  [0m] Listening on LXD - unix socket.
@@ -565,225 +571,277 @@ Mounted Huge Pages File System.
          Starting Login to default iSCSI targets...
 [[0;32m  OK  [0m] Reached target Sockets.
 [[0;32m  OK  [0m] Reached target Basic System.
-[[0;32m  OK  [0m] Started Regular background program processing daemon.
-         Starting System Logging Service...
-         Starting LSB: MD monitoring daemon...
-         Starting LSB: Record successful boot for GRUB...
-         Starting Login Service...
-         Starting vboxadd.service...
-         Starting LXD - container startup/shutdown...
-         Starting OpenBSD Secure Shell server...
-[[0;32m  OK  [0m] Started D-Bus System Message Bus.
 [[0;32m  OK  [0m] Started ACPI event daemon.
-         Starting containerd container runtime...
-[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
-         Starting Snappy daemon...
-         Starting Accounts Service...
          Starting /etc/rc.local Compatibility...
+         Starting LXD - container startup/shutdown...
+         Starting Login Service...
+         Starting System Logging Service...
 [[0;32m  OK  [0m] Started Deferred execution scheduler.
+         Starting vboxadd.service...
+         Starting LSB: MD monitoring daemon...
+         Starting containerd container runtime...
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting OpenBSD Secure Shell server...
+         Starting LSB: Record successful boot for GRUB...
+[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
+         Starting Accounts Service...
+         Starting Snappy daemon...
 [[0;32m  OK  [0m] Started System Logging Service.
 [[0;32m  OK  [0m] Started /etc/rc.local Compatibility.
 [[0;32m  OK  [0m] Started containerd container runtime.
-[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
 [[0;32m  OK  [0m] Started Login to default iSCSI targets.
-[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
 [[0;32m  OK  [0m] Started LSB: MD monitoring daemon.
 [[0;32m  OK  [0m] Started LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
 [[0;32m  OK  [0m] Started Login Service.
 [[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
          Starting Authenticate and Authorize Users to Run Privileged Tasks...
 [[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
 [[0;32m  OK  [0m] Reached target Remote File Systems.
-         Starting LSB: Set the CPU Frequency Scaling governor to "ondemand"...
-         Starting LSB: automatic crash report generation...
-         Starting LSB: Set up cgroupfs mounts....
          Starting LSB: daemon to balance interrupts for SMP systems...
          Starting Permit User Sessions...
+         Starting LSB: automatic crash report generation...
+         Starting LSB: Set the CPU Frequency Scaling governor to "ondemand"...
+         Starting LSB: Set up cgroupfs mounts....
          Starting Docker Application Container Engine...
 [[0;32m  OK  [0m] Started Permit User Sessions.
 [[0;32m  OK  [0m] Started LSB: Set up cgroupfs mounts..
-         Starting Terminate Plymouth Boot Screen...
          Starting Hold until boot process finishes up...
+         Starting Terminate Plymouth Boot Screen...
 [[0;32m  OK  [0m] Started LSB: Set the CPU Frequency Scaling governor to "ondemand".
 [[0;32m  OK  [0m] Started Authenticate and Authorize Users to Run Privileged Tasks.
 [[0;32m  OK  [0m] Started Hold until boot process finishes up.
+[[0;32m  OK  [0m] Started Accounts Service.
 [[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
-         Starting Set console scheme...
+[[0;32m  OK  [0m] Started LSB: daemon to balance interrupts for SMP systems.
 [[0;32m  OK  [0m] Started Getty on tty1.
 [[0;32m  OK  [0m] Started Serial Getty on ttyS0.
 [[0;32m  OK  [0m] Reached target Login Prompts.
-[[0;32m  OK  [0m] Started Set console scheme.
-[[0;32m  OK  [0m] Started LSB: daemon to balance interrupts for SMP systems.
+         Starting Set console scheme...
 [[0;32m  OK  [0m] Started LSB: automatic crash report generation.
-[[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Started Set console scheme.
 [[0;32m  OK  [0m] Started Snappy daemon.
          Starting Wait until snapd is fully seeded...
 [[0;32m  OK  [0m] Started Wait until snapd is fully seeded.
          Starting Apply the settings specified in cloud-config...
-[[0;32m  OK  [0m] Created slice User Slice of vagrant.
-         Starting User Manager for UID 1000...
-[   12.248251] cloud-init[1287]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'modules:config' at Thu, 12 Sep 2019 01:56:32 +0000. Up 12.03 seconds.
-[[0;32m  OK  [0m] Started Session 1 of user vagrant.
-[[0;32m  OK  [0m] Started User Manager for UID 1000.
+[    9.984465] cloud-init[1277]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'modules:config' at Mon, 23 Sep 2019 02:46:16 +0000. Up 9.83 seconds.
 [[0;32m  OK  [0m] Started Apply the settings specified in cloud-config.
 [[0;32m  OK  [0m] Started Docker Application Container Engine.
+[[0;32m  OK  [0m] Created slice User Slice of vagrant.
+         Starting User Manager for UID 1000...
+[[0;32m  OK  [0m] Started Session 1 of user vagrant.
+[[0;32m  OK  [0m] Started User Manager for UID 1000.
 
 Ubuntu 16.04.6 LTS utn-devops ttyS0
 
-utn-devops login: [   18.030625] cloud-init[2711]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'modules:final' at Thu, 12 Sep 2019 01:56:38 +0000. Up 17.93 seconds.
-[   18.032374] cloud-init[2711]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 finished at Thu, 12 Sep 2019 01:56:38 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 18.02 seconds
-[   36.879858] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883053] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883061] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883067] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883072] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883077] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883083] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883089] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.883094] systemd-fstab-generator[3485]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   36.996091] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.003251] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.006911] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.009758] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.012500] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.015271] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.017985] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.021888] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.024760] systemd-fstab-generator[3510]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.096632] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.104047] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.108641] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.111587] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.114549] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.117529] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.121212] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.125693] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[   37.129248] systemd-fstab-generator[3533]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
-[[0;32m  OK  [0m] Stopped target Cloud-init target.
-         Stopping User Manager for UID 1000...
-         Stopping Session 4 of user vagrant.
-         Stopping Authenticate and Authorize Users to Run Privileged Tasks...
-[[0;32m  OK  [0m] Stopped target Timers.
-         Stopping ACPI event daemon...
-[[0;32m  OK  [0m] Stopped target Graphical Interface.
-         Stopping Accounts Service...
-[[0;32m  OK  [0m] Stopped Daily apt upgrade and clean activities.
-[[0;32m  OK  [0m] Stopped Daily apt download activities.
-[[0;32m  OK  [0m] Stopped target System Time Synchronized.
-[[0;32m  OK  [0m] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
-[[0;32m  OK  [0m] Stopped Daily Cleanup of Temporary Directories.
-[[0;32m  OK  [0m] Stopped Execute cloud user/final scripts.
-[[0;32m  OK  [0m] Stopped target Multi-User System.
-         Stopping LSB: automatic crash report generation...
-         Stopping LSB: Set up cgroupfs mounts....
-         Stopping Docker Application Container Engine...
-         Stopping Regular background program processing daemon...
-         Stopping Unattended Upgrades Shutdown...
-         Stopping Deferred execution scheduler...
-         Stopping FUSE filesystem for LXC...
-         Stopping LSB: daemon to balance interrupts for SMP systems...
-         Stopping OpenBSD Secure Shell server...
-         Stopping LXD - container startup/shutdown...
-         Stopping D-Bus System Message Bus...
-         Stopping LSB: MD monitoring daemon...
-[[0;32m  OK  [0m] Stopped target Login Prompts.
-         Stopping Getty on tty1...
-         Stopping Serial Getty on ttyS0...
-         Stopping LSB: Record successful boot for GRUB...
-         Stopping LSB: Set the CPU Frequency Scaling governor to "ondemand"...
-         Stopping vboxadd.service...
-         Stopping System Logging Service...
-[[0;32m  OK  [0m] Stopped Apply the settings specified in cloud-config.
-[[0;32m  OK  [0m] Stopped Wait until snapd is fully seeded.
-[[0;32m  OK  [0m] Stopped target Cloud-config availability.
-[[0;32m  OK  [0m] Unmounted /var/lib/lxcfs.
-[[0;32m  OK  [0m] Stopped Regular background program processing daemon.
-[[0;32m  OK  [0m] Stopped System Logging Service.
-[[0;32m  OK  [0m] Stopped ACPI event daemon.
-[[0;32m  OK  [0m] Stopped Accounts Service.
-[[0;32m  OK  [0m] Stopped Deferred execution scheduler.
-[[0;32m  OK  [0m] Stopped Authenticate and Authorize Users to Run Privileged Tasks.
-[[0;32m  OK  [0m] Stopped Getty on tty1.
-[[0;32m  OK  [0m] Stopped Serial Getty on ttyS0.
-[[0;32m  OK  [0m] Stopped User Manager for UID 1000.
-[[0;32m  OK  [0m] Stopped OpenBSD Secure Shell server.
-[[0;32m  OK  [0m] Stopped Session 4 of user vagrant.
-[[0;32m  OK  [0m] Stopped LSB: Set up cgroupfs mounts..
-[[0;32m  OK  [0m] Stopped D-Bus System Message Bus.
-[[0;32m  OK  [0m] Stopped FUSE filesystem for LXC.
-[[0;32m  OK  [0m] Stopped LSB: automatic crash report generation.
-[[0;32m  OK  [0m] Stopped Unattended Upgrades Shutdown.
-[[0;32m  OK  [0m] Stopped LXD - container startup/shutdown.
-[[0;32m  OK  [0m] Stopped LSB: Set the CPU Frequency Scaling governor to "ondemand".
-[[0;32m  OK  [0m] Stopped LSB: Record successful boot for GRUB.
-[[0;32m  OK  [0m] Stopped LSB: MD monitoring daemon.
-[[0;32m  OK  [0m] Stopped LSB: daemon to balance interrupts for SMP systems.
-[[0;32m  OK  [0m] Removed slice User Slice of vagrant.
-         Stopping Login Service...
-[[0;32m  OK  [0m] Removed slice system-serial\x2dgetty.slice.
-         Stopping Permit User Sessions...
-[[0;32m  OK  [0m] Removed slice system-getty.slice.
-[[0;32m  OK  [0m] Stopped /etc/rc.local Compatibility.
-[[0;32m  OK  [0m] Stopped Permit User Sessions.
-[[0;32m  OK  [0m] Stopped target Remote File Systems.
-[[0;32m  OK  [0m] Stopped target Remote File Systems (Pre).
-         Stopping Login to default iSCSI targets...
-[[0;32m  OK  [0m] Stopped Login Service.
-[[0;32m  OK  [0m] Stopped target User and Group Name Lookups.
-[[0;32m  OK  [0m] Stopped Login to default iSCSI targets.
-         Stopping iSCSI initiator daemon (iscsid)...
-[[0;32m  OK  [0m] Stopped iSCSI initiator daemon (iscsid).
-[[0;32m  OK  [0m] Unmounted /run/docker/netns/93759f9a11bc.
-[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...88823d48d6d019cdbdc2/mounts/shm.
-[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...0507b9faf91814dfb6247f55/merged.
-[[0;32m  OK  [0m] Unmounted /run/docker/netns/5ae026ce670c.
-[[0;32m  OK  [0m] Unmounted /var/lib/docker/container...53a349bc1c4bcc310788/mounts/shm.
-[[0;32m  OK  [0m] Unmounted /var/lib/docker/overlay2/...addda7c41c904556594bbe4e/merged.
-[[0;32m  OK  [0m] Stopped Docker Application Container Engine.
-         Stopping containerd container runtime...
-[[0;32m  OK  [0m] Stopped target Network is Online.
-[[0;32m  OK  [0m] Stopped containerd container runtime.
-[[0;32m  OK  [0m] Stopped target Network.
-[[0;32m  OK  [0m] Unmounted /vagrant.
-[[0;32m  OK  [0m] Stopped vboxadd.service.
-[[0;32m  OK  [0m] Stopped target Basic System.
-[[0;32m  OK  [0m] Stopped target Slices.
-[[0;32m  OK  [0m] Removed slice User and Session Slice.
-[[0;32m  OK  [0m] Stopped target Sockets.
-[[0;32m  OK  [0m] Closed LXD - unix socket.
-[[0;32m  OK  [0m] Closed UUID daemon activation socket.
-[[0;32m  OK  [0m] Closed D-Bus System Message Bus Socket.
-[[0;32m  OK  [0m] Closed Socket activation for snappy daemon.
-[[0;32m  OK  [0m] Closed Docker Socket for the API.
-[[0;32m  OK  [0m] Closed Syslog Socket.
-[[0;32m  OK  [0m] Closed ACPID Listen Socket.
-[[0;32m  OK  [0m] Stopped target Paths.
-[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
-[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
-[[0;32m  OK  [0m] Stopped ACPI Events Check.
-[[0;32m  OK  [0m] Stopped target System Initialization.
-         Stopping Update UTMP about System Boot/Shutdown...
-[[0;32m  OK  [0m] Stopped Initial cloud-init job (metadata service crawler).
-         Stopping Raise network interfaces...
-[[0;32m  OK  [0m] Stopped target Encrypted Volumes.
-         Stopping Load/Save Random Seed...
-[[0;32m  OK  [0m] Stopped target Swap.
-         Deactivating swap /swapdir/swapfile...
-[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
-[[0;32m  OK  [0m] Stopped Update UTMP about System Boot/Shutdown.
-[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
-[[0;32m  OK  [0m] Deactivated swap /swapdir/swapfile.
-[[0;32m  OK  [0m] Stopped Raise network interfaces.
-[[0;32m  OK  [0m] Stopped target Network (Pre).
-[[0;32m  OK  [0m] Stopped Initial cloud-init job (pre-networking).
-[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
-[[0;32m  OK  [0m] Stopped Load Kernel Modules.
-[[0;32m  OK  [0m] Stopped target Local File Systems.
-         Unmounting /run/user/1000...
-[[0;32m  OK  [0m] Unmounted /run/user/1000.
-[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
-[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
-[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
-[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
-[[0;32m  OK  [0m] Reached target Shutdown.
-[ 4017.649548] reboot: Power down
+utn-devops login: [   16.337702] cloud-init[2700]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 running 'modules:final' at Mon, 23 Sep 2019 02:46:23 +0000. Up 16.23 seconds.
+[   16.339304] cloud-init[2700]: Cloud-init v. 19.1-1-gbaa47854-0ubuntu1~16.04.1 finished at Mon, 23 Sep 2019 02:46:23 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 16.32 seconds
+[  108.949053] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.953211] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.955507] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.959989] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.965918] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.968491] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.970629] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.972777] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  108.976239] systemd-fstab-generator[4878]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.446273] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.452286] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.455240] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.458001] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.462436] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.465350] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.468642] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.471648] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.474751] systemd-fstab-generator[4961]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.562708] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.566472] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.570277] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.573230] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.576387] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.579777] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.582490] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.585311] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.588104] systemd-fstab-generator[4999]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.898124] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.902105] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.905597] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.908812] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.913014] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.916538] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.919279] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.921994] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  109.924757] systemd-fstab-generator[5042]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.053399] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.057585] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.061792] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.065287] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.068669] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.071718] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.075017] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.080273] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.082972] systemd-fstab-generator[5067]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.173544] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.179803] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.185011] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.188760] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.191928] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.197053] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.200421] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.203416] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  110.206119] systemd-fstab-generator[5105]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.833901] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.837257] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.840165] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.844226] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.848493] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.851323] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.854067] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.856907] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  112.861701] systemd-fstab-generator[5156]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.684582] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.687757] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691437] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691444] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691451] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691457] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691463] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691468] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.691475] systemd-fstab-generator[5243]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.950524] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.953812] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.957230] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.961432] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.964643] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.967425] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.970094] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.972979] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  115.975797] systemd-fstab-generator[5271]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.093785] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.096981] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.100730] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.103585] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.106935] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.109763] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.113014] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.115696] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.118514] systemd-fstab-generator[5297]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.204793] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.210306] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.213947] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.217421] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.217428] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.217433] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.217439] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.217444] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  116.217450] systemd-fstab-generator[5334]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.760976] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.766406] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.770356] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.774136] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.777880] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.780884] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.783554] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.786490] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  117.789496] systemd-fstab-generator[5389]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.768858] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.778344] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.783119] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.786290] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.792513] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.797620] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.800854] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.804141] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  511.807555] systemd-fstab-generator[7770]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.449137] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.452267] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.456255] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.460447] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.464144] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.467370] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.470380] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.476295] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.479513] systemd-fstab-generator[8611]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.564610] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.578676] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.582767] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.586174] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.589708] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.592988] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.596129] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.599655] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  515.603030] systemd-fstab-generator[8650]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.493222] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.496383] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.499185] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.503407] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.507257] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.510897] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.514077] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.517199] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  517.520059] systemd-fstab-generator[9407]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.632019] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.635471] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.647271] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.651127] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.654230] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.657823] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.660703] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.663381] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  521.667264] systemd-fstab-generator[10423]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.310412] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.316352] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.320198] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.323076] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.325815] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.328670] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.332239] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.335533] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.338845] systemd-fstab-generator[11953]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.638223] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.642008] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.645280] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.648421] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.651930] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.655041] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.658169] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.661789] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.664749] systemd-fstab-generator[12009]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.741752] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.746629] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.749998] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.754966] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.757809] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.760763] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.764408] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.767612] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  745.770853] systemd-fstab-generator[12047]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.335829] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.340411] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.344722] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.351781] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.356315] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.359774] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.371449] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.396113] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  747.403365] systemd-fstab-generator[12148]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.436762] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.453966] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.458958] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.462270] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.465948] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.469784] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.473834] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.477290] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[  750.480339] systemd-fstab-generator[12217]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.386317] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.389479] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.392307] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.395514] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.399234] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.403785] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.406984] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.409945] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?
+[ 1933.412922] systemd-fstab-generator[14163]: Failed to create swap unit file /run/systemd/generator/swapdir-swapfile.swap, as it already exists. Duplicate entry in /etc/fstab?

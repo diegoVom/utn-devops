@@ -34,10 +34,14 @@ Vagrant.configure("2") do |config|
   # Esto se realiza para poder darle visibilidad a los puertos de la maquina virtual 
   # y además para que no se solapen los puertos con los de nuestra equipo en el caso de que
   # ese número de puerto este en uso.
+ # config.vm.network "forwarded_port", guest: 3306, host: 4041
+ # config.vm.network "forwarded_port", guest: 8080, host: 8090
+ # config.vm.network "forwarded_port", guest: 4567, host: 4567
   config.vm.network "forwarded_port", guest: 8081, host: 8081
-  config.vm.network "forwarded_port", guest: 3306, host: 4041
-  config.vm.network "forwarded_port", guest: 8080, host: 8090
-  config.vm.network "forwarded_port", guest: 4567, host: 4567
+  config.vm.network "forwarded_port", guest: 8082, host: 8082
+  config.vm.network "forwarded_port", guest: 4400, host: 4400
+  # Puerto en que escuchar el servidor maestro de Puppet
+  config.vm.network "forwarded_port", guest: 8140, host: 8140
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -98,8 +102,20 @@ Vagrant.configure("2") do |config|
   # Además de usarlo como ejemplo para distinguir dos maneras de aprovisionamiento el archivo contiene
   # una definición del firewall de Ubuntu para permitir el tráfico de red que se redirecciona internamente, configuración 
   # necesaria para Docker. Luego será copiado al lugar correcto por el script Vagrant.bootstrap.sh
-  config.vm.provision "file", source: "hostConfigs/ufw", destination: "/tmp/" 
-
+  config.vm.provision "file", source: "hostConfigs/ufw", destination: "/tmp/utw"
+  config.vm.provision "file", source: "hostConfigs/etc_hosts.txt", destination: "/tmp/etc_hosts.txt"
+  # Archivos de Puppet
+  config.vm.provision "file", source: "hostConfigs/puppet/site.pp", destination: "/tmp/site.pp"
+  config.vm.provision "file", source: "hostConfigs/puppet/init.pp", destination: "/tmp/init.pp"
+  config.vm.provision "file", source: "hostConfigs/puppet/init_jenkins.pp", destination: "/tmp/init_jenkins.pp"
+  config.vm.provision "file", source: "hostConfigs/puppet/puppet-master.conf", destination: "/tmp/puppet-master.conf"
+  config.vm.provision "file", source: "hostConfigs/puppet/.env", destination: "/tmp/env"
+  # Archivo para Jenkins
+  config.vm.provision "file", source: "hostConfigs/jenkins/default_jenkins", destination: "/tmp/jenkins_default"
+  config.vm.provision "file", source: "hostConfigs/jenkins/init_d", destination: "/tmp/jenkins_init_d"
+  # Scripts para el servicio de Docker
+  config.vm.provision "file", source: "hostConfigs/docker-start.sh", destination: "/tmp/docker-start.sh"
+  config.vm.provision "file", source: "hostConfigs/docker-stop.sh", destination: "/tmp/docker-stop.sh"
   # En este archivo tendremos el provisionamiento de software necesario para nuestra 
   # maquina virtual. Por ejemplo, servidor web, servidor de base de datos, etc.
 #  config.vm.provision :shell, path: "Vagrant.bootstrap.sh", run: "always" 
